@@ -1,171 +1,87 @@
-.nav {
-    z-index: 9999;
-    background-color: #0E2A41;
+body {
+    background: url('../img/bgc.png');
+    /*background-repeat:round;*/
+    background-size: cover;
+    /* background-position: center; */
 }
 
-.nav .nav-top  {
-    padding: 0 30px;
-}
 
-.nav .nav-top  h3 {
+/*头部部分*/
+
+
+/*.header .pull-right{
+    padding-top: 20px;
+    padding-right: 40px;
+    position: relative;
+}
+.header img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.header .pull-right .logout{
+    position: absolute;
+    top:60px;
+    right: 44px;
+    display: none;
+}*/
+
+
+/*标题tittle部分*/
+
+.tittle {
+    text-align: center;
+    padding-top: 140px;
+    font-size: 30px;
     color: #fff;
 }
 
-.main {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    padding-left: 220px;
-}
 
-.main .header {
-    height: 75px;
-    padding-right: 40px;
-    background-color: #fff;
-    z-index: 999;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    margin-left: -220px;
-    border-bottom: 1px solid #e0e0e0;
-}
+/*导航部分*/
 
-.main .header .info {
-    float: right;
-    line-height: 75px;
-}
-
-.main .header .info img {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgb(97, 97, 97);
-}
-
-
-/* 视频管理 */
-.main .content{
-    height: 100%;
-    padding-top: 75px;
-    user-select: none;
-}
-.main .content .video {
+.nav {
     position: relative;
-    padding-left: 30px;
-    padding-right: 220px;
-    height: 100%;
-    background-color: #e4e4e4;
+    margin-top: 132px;
 }
 
-.main .content .video .screen .video-frame {
-    position: relative;
-    width: 45%;
-    height: 263px;
-    float: left;
-    /* border: 1px solid #333; */
-    background-color: #0E2A41;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 50px;
-}
-.main .content .video .screen .video-frame.select{
-    border: 2px solid greenyellow;
-}
-.main .content .video .screen .video-frame .video-header{
+.nav a {
+    width: 190px;
+    height: 225px;
+    border: 1px solid #FFF;
     position: absolute;
-    top: -33px;
-    left: 0;
-}
-.main .content .video .screen .video-frame .video-ocx,
-.main .content .video .screen .video-frame object,
-.main .content .video .screen .video-frame .mask {
-    width: 100%;
-    height: 100%;
-}
-.main .content .video .screen .video-frame .mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    filter:Alpha(opacity=0);
-}    
-
-.main .content .video .right{
-    width: 220px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    /* box-sizing: border-box; */
-    /* padding-top: 75px; */
-    /* margin-top: -75px; */
-    /* height: 100%; */
+    left: 50%;
+    /*margin-left: -95px;*/
+    text-decoration: none;
+    color: #fff;
     text-align: center;
-    background-color: #fff;
+    padding-top: 20px;
 }
-.main .content .video .right .iplist h3{
-    padding:10px 0;
-    border-bottom: 1px solid #e4e4e4;
-}
-.main .content .video .right .iplist ul li{
-    padding: 6px 0;
-    cursor: pointer;
-}
-.main .content .video .right .control{
-    width: 100%;
-    height: 480px;
-    /* background-color: yellowgreen; */
-    position: absolute;
-    bottom: 0;
-}
-.main .content .video .right .control img{
-    width: 100%;
-}
-.main .content .video .right .control span{
-    width: 50%;
-    height: 44px;
-    font-size: 44px;
-    cursor: pointer;
-}
-.main .content .video .right .control span:hover{
-    color: #999999;
-}
-.main .content .video .right .control span:active{
-    color: rgb(54, 54, 54);
-}
-/* 视频管理结束 */
-/* 拓扑图部分 */
-.tuopu .list .MA-list,
-.tuopu .list .CA-list{
-    display: inline-block;
-    margin: 100px 100px;
-}
-/* 拓扑图结束 */
-/* 設備管理 */
-.device{
-    padding: 50px 100px;
-}
-.device .adduser{
-    margin: 20px 0;
-    /* color: #33A3FF;
-    cursor: pointer; */
-}
-.device .usermanager .addmodal .modal-content{
-    width: 500px;
-    padding: 50px;
-}
-/* 设备管理结束 */
 
-/* 文件存储位置 */
-.file .save{
-    width: 500px;
-    margin: 100px auto;
+.nav a:hover {
+    cursor: pointer;
 }
-/* 文件储存位置结束 */
+
+.nav a.first {
+    margin-left: -368px;
+}
+
+.nav a.first img {
+    margin-top: 12px;
+}
+
+.nav a.middle {
+    margin-left: -95px;
+}
+
+.nav a.last {
+    margin-left: 180px;
+}
+
+.nav a p {
+    position: absolute;
+    bottom: 10px;
+    left: 49px;
+    font-size: 20px;
+    font-weight: 700;
+}

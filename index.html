@@ -5,346 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./fonts/iconfont.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./lib/bootstrap1/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap1/css/bootstrap.css">
     <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="nav">
-        <div class="nav-top">
-            <div style="border-bottom:1px solid rgba(255,255,255,.1)">
-                <!-- <img src="images/mini.png"> -->
-                <h3>公共交通可视化应急管理平台</h3>
+    <!--<div class="header clearfix">
+        <div class="pull-right">
+            <div class="peopleInfo">
+                <img src="./img/default.jpg" alt="">
+                <span class="name">徐警官</span>
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </div>
+            <div class="logout">
+                <a href="javascript:;">退出登录</a>
             </div>
         </div>
-        <ul>
-            <li class="nav-item">
-                <a href="#video">
-                    <i class="my-icon nav-icon icon_1"></i>
-                    <span>视频管理</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:;">
-                    <i class="my-icon nav-icon icon_2"></i>
-                    <span>网络拓扑</span>
-                    <i class="my-icon nav-more"></i>
-                </a>
-                <ul>
-                    <li>
-                        <a href="#tuopu">
-                            <span>组网拓扑图</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#position">
-                            <span>实时位置图</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="#device">
-                    <i class="my-icon nav-icon icon_3"></i>
-                    <span>设备管理</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:;">
-                    <i class="my-icon nav-icon icon_2"></i>
-                    <span>系统管理</span>
-                    <i class="my-icon nav-more"></i>
-                </a>
-                <ul>
-                    <li>
-                        <a href="#personal">
-                            <span>用户管理</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#system">
-                            <span>系统升级</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#file">
-                            <span>文件存储</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#language">
-                            <span>语言升级</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    </div>-->
+    <div class="tittle">
+        <p>公共( 轨道 )交通可视化应急通信指挥系统管理平台</p>
     </div>
-    <div class="main">
-        <div class="header">
-            <div class="info">
-                <img src="" alt="">
-                <span>张晓凡</span>
-                <i class="my-icon nav-more"></i>
-            </div>
-        </div>
-        <div class="content">
-            <div id="video" class="video clearfix">
-                <div class="screen">
-                    <div class="video-frame select vf-1" data-ocxid="ocx-1" id="vf-1">
-                        <div class="video-header">
-                            <button>选择播放</button>
-                            <button class="hide">开始录像</button>
-                            <button class="hide">开始声音</button>
-                            <button class="hide">抓图</button>
-                            <button class="hide">开启全屏</button>
-                        </div>
-                        <div class="video-ocx">
-                            <object id="ocx-1" type="application/xhanhan-activex" border="0" width="100%" height="360" classid="clsid:FD3BEB0C-AB43-4253-9146-C371D48FBE0D"></object>
-                        </div>
-                        <div class="mask"></div>
-
-                    </div>
-
-                    <div class="video-frame vf-2" data-ocxid="ocx-2" id="vf-2">
-                        <div class="video-header">
-                            <button>选择播放</button>
-                            <button class="hide">开始录像</button>
-                            <button class="hide">开始声音</button>
-                            <button class="hide">抓图</button>
-                            <button class="hide">开启全屏</button>
-                        </div>
-                        <div class="video-ocx">
-                            <object id="ocx-2" type="application/xhanhan-activex" border="0" width="100%" height="360" classid="clsid:FD3BEB0C-AB43-4253-9146-C371D48FBE0D"></object>
-                        </div>
-                        <div class="mask"></div>
-                    </div>
-
-                    <div class="video-frame vf-3" data-ocxid="ocx-3" id="vf-3">
-                        <div class="video-header">
-                            <button>选择播放</button>
-                            <button class="hide">开始录像</button>
-                            <button class="hide">开始声音</button>
-                            <button class="hide">抓图</button>
-                            <button class="hide">开启全屏</button>
-                        </div>
-                        <div class="video-ocx">
-                            <object id="ocx-3" type="application/xhanhan-activex" border="0" width="100%" height="360" classid="clsid:FD3BEB0C-AB43-4253-9146-C371D48FBE0D"></object>
-                        </div>
-                        <div class="mask"></div>
-                    </div>
-
-                    <div class="video-frame vf-4" data-ocxid="ocx-4" id="vf-4">
-                        <div class="video-header">
-                            <button>选择播放</button>
-                            <button class="hide">开始录像</button>
-                            <button class="hide">开始声音</button>
-                            <button class="hide">抓图</button>
-                            <button class="hide">开启全屏</button>
-                        </div>
-                        <div class="video-ocx">
-                            <object id="ocx-4" type="application/xhanhan-activex" border="0" width="100%" height="360" classid="clsid:FD3BEB0C-AB43-4253-9146-C371D48FBE0D"></object>
-                        </div>
-                        <div class="mask"></div>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="iplist">
-                        <h3>摄像头列表
-                            <span>(2/3)</span>
-                        </h3>
-                        <ul>
-                            <li title="192.168.1.1">警官1</li>
-                            <li title="192.168.1.2">警官2</li>
-                            <li title="192.168.1.3">警官3</li>
-                        </ul>
-                    </div>
-                    <!-- <div class="control">
-                        <img src="./img/control.png" alt="">
-                        <span class="glyphicon glyphicon-camera"></span><span class="glyphicon glyphicon-facetime-video"></span>
-                    </div> -->
-                </div>
-            </div>
-            <div id="tuopu" class="tuopu">
-                <div class="list">
-                    <div class="MA-list">
-                        <h3>中继器</h3>
-                        <ul>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:MA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="CA-list">
-                        <h3>摄像头</h3>
-                        <ul>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                            <li>
-                                <span>ID:CA00001</span>
-                                <span>IP:189.168.1.10</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="position" class="position">position</div>
-            <div id="device" class="device">
-                <div class="adduser">
-                    <button type="button" class="btn btn-info">
-                        <span class="glyphicon glyphicon-plus"></span>
-                        <span>添加用户</span>
-                    </button>
-                </div>
-                <div class="usermanager">
-                    <!-- 修改用户名模态框位置 -->
-                    <div class="modal fade changemodal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <!-- <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h4 class="modal-title" id="exampleModalLabel">修改用户名</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="recipient-name" class="control-label">原用户名：</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message-text" class="control-label">新用户名：</label>
-                                            <textarea class="form-control" id="message-text"></textarea>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                    <button type="button" class="btn btn-primary">提交</button>
-                                    
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- 新增用户模态框位置 -->
-                    <div class="modal addmodal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                        <div class="modal-dialog modal-sm" role="document">
-                            <div class="modal-content">
-                                <label for="username">请输入需要添加的摄像头名：</label>
-                                <input type="text" class="form-control savePath username" id="username" value="">
-                                <label for="usernameIp">请输入该摄像头的IP：</label>
-                                <input type="text" class="form-control savePath usernameIp" id="usernameIp" value="">
-                                <label for="usernameIp">请输入该摄像头的ID：</label>
-                                <input type="text" class="form-control savePath usernameId" id="usernameId" value="">
-                                <br/>
-                                <button type="button " onclick="addCamera() " class="btn btn-success ">添加</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 模态框 -->
-                    <table class="change table table-bordered">
-                        <thead>
-                            <th>用户名</th>
-                            <th>IP</th>
-                            <th>配置</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="name">摄像头1</td>
-                                <td class="ip">192.168.1.10</td>
-                                <td class="id hidden">1111</td>
-                                <td>
-                                    <button type="button" class="btn btn-warning btn-xs userchange">修改用户名</button>
-                                    <button type="button" class="btn btn-danger btn-xs userdel">删除用户</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div id="personal" class="personal">personal</div>
-            <div id="system" class="system">system</div>
-            <div id="file" class="file">
-                <div class="save">
-                    <label for="savePath">请填入存储路径：</label>
-                    <input type="text" class="form-control savePath" id="savePath" value="C:/record">
-                    <br/>
-                    <br/>
-                    <button type="button" class="btn btn-success ">提交</button>
-                </div>
-            </div>
-            <div id="language" class="language">language</div>
-        </div>
+    <div class="nav">
+        <a href="./content.html#video" class="videoManage first">
+            <img src="./img/video.png" alt="">
+            <p>视频管理</p>
+        </a>
+        <a href="./content.html#tuopu" class="networkTopology middle">
+            <img src="./img/net.png" alt="">
+            <p>网络拓补</p>
+        </a>
+        <a href="./content.html#system" class="sysManage last">
+            <img src="./img/sysmanage.png" alt="">
+            <p>系统管理</p>
+        </a>
     </div>
 </body>
+<!--<script src="./lib/jQuery/jquery-1.12.4.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.js"></script>-->
 
 </html>
-<script src="./js/base.js"></script>
-<script src="./js/model.js"></script>
-<script src="./lib/jquery/jquery-1.11.0.min.js"></script>
-<script src="./lib/jquery/nav.js"></script>
-<script src="./lib/bootstrap1/js/bootstrap.js"></script>
-<script src="./js/service.js"></script>
-<script src="./js/index.js"></script>

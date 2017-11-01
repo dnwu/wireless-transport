@@ -7,6 +7,8 @@ $.support.cors = true;
  */
 
 $(function () {
+    var url_hash =window.location.hash.slice(1)
+    $('a.A'+url_hash).click()
     // hash实现路由跳转
     var hashArr = [
         '#video',
@@ -22,9 +24,9 @@ $(function () {
     for (var i = 0; i < length; i++) {
         $(hashArr[i]).hide()
     }
-    $('#video').show()
+    $('#'+url_hash).show()
     $(window).on('hashchange', function (e) {
-        console.log(window.location.hash)
+        // console.log(window.location)
         var hash = window.location.hash
         for (var i = 0; i < length; i++) {
             $(hashArr[i]).hide()
@@ -34,7 +36,7 @@ $(function () {
 })
 
 /**
- * vedio块的逻辑
+ * video块的逻辑
  */
 $(function () {
     fnInitSelect()
@@ -121,6 +123,7 @@ $(function () {
     $('#video .right ul').on('click', 'li', function () {
         // console.log($videoFrame)
         var devIp = $(this).attr('title')
+        var devName = $(this).html()
         // console.log(devIp)
         var ocxId = ''
         $videoFrame.each(function (index, val) {
@@ -129,6 +132,7 @@ $(function () {
                 $(val)
                     .find('.video-header button')
                     .removeClass('hide')
+                $(val).find('.devname').html(devName)
             }
         })
         Handler.fnPlayDev(ocxId, devIp)
@@ -202,19 +206,27 @@ $(function () {
     // 初始化模态框
     var $changebtn = $('.device .usermanager .change .userchange')
     var $delbtn = $('.device .usermanager .change .userdel')
-    var $content = $('.device .usermanager .modal .modal-content')
-    var $modal = $('.device .usermanager .changemodal')
+    var $content = $('.device .usermanager .changemodal .modal-content')
+    var $modal = $('.device .usermanager #changemodal')
     // 添加用户按钮
-    var $adduser = $('.device .adduser .btn')
-    var $addusermodal = $('.device .usermanager .addmodal')
-    $adduser.on('click', function () {
+    var $adduserbtn = $('.device .adduser .btn')
+    var $addusermodal = $('.device .usermanager #addmodal')
+    // 删除用户的按钮
+    var $deluserBtn = $('.device .usermanager table.change .userdel')
+    // 修改用户名提交按钮
+    var $changesubmitBtn = null
+    
+    $deluserBtn.on('click',function(){
+        deluser()
+    })
+    $adduserbtn.on('click', function (e) {
         $addusermodal.modal('show')
     })
     function initModel() {
         // console.log($changebtn)
         $changebtn
             .on('click', function () {
-                console.log('点击了')
+                // console.log($content)
                 $tr = $(this).parents('tr')
                 var name = $tr
                     .find('.name')
@@ -235,14 +247,33 @@ $(function () {
                         'd="recipient-name" value=' + name + '></div><input type="hidden" class="id" value=' + id + '><div class="form-group"><label for="message-text" class="control-label">新用户名：</' +
                         'label><input type="text" class="form-control newName" id="newName"></div></form>' +
                         '</div><div class="modal-footer"><button type="button" class="btn btn-default" da' +
-                        'ta-dismiss="modal">关闭</button><button type="button" onclick="changesubmit()" cla' +
-                        'ss="btn btn-primary">提交</button></div>';
+                        'ta-dismiss="modal">关闭</button><button type="button" class="btn submitBtn btn-primary">提交</button></div>';
                 $content.html(HTML)
                 $modal.modal('show')
+                $changesubmitBtn = $('.device .usermanager .changemodal .submitBtn')
+                $changesubmitBtn.on('click',function(){
+                    changesubmit()
+                })
             })
     }
     // 删除摄像头
-    function deluser() {}
+    function deluser() {
+        var ip = $('.device .usermanager table.change .ip').html()
+        console.log('111',ip)
+        $.ajax({
+            url:baseUrl+ 'device/delete/camera',
+            type:'post',
+            data:{
+                'ip':ip
+            },
+            success:function(){
+                if (data.status == '200') {
+                    getCamerasIp()
+                }
+            },
+            complete:function(){}
+        })
+    }
     // 添加摄像头
     function addCamera() {
         var $name = $('.device .addmodal .username')
@@ -306,7 +337,7 @@ $(function () {
         var id = $('.device .usermanager .modal .id').val()
         var newName = $('.device .usermanager .modal .newName').val()
         var $modal = $('.device .usermanager .modal')
-        // console.log(newName)
+        // console.log('3123124',newName)
         if (newName == '') {
             return false
         }
@@ -318,7 +349,7 @@ $(function () {
                 'name': newName
             },
             success: function (data) {
-                console.log(data)
+                // console.log(data)
                 if (data.status == '200') {
                     $modal.modal('hide')
                 }
